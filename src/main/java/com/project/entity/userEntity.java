@@ -1,6 +1,5 @@
 package com.project.entity;
 
-import java.math.BigDecimal;
 import java.util.Date;
 
 import org.springframework.data.annotation.CreatedDate;
@@ -29,7 +28,7 @@ public class userEntity {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private BigDecimal memberID;
+	private Long memberID;
 	private String name;
 	private String emailId;
 	

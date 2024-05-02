@@ -7,10 +7,9 @@ import org.springframework.stereotype.Service;
 import com.project.entity.userEntity;
 
 @Service
+public interface UserService {
 
-public class userService {
-	
-	userEntity findByMemberID(long memberID);
+userEntity findByMemberID(long memberID);
 	
 	userEntity findByemailId(String emailId);
 	

@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.project.entity.userEntity;
 import com.project.repository.userRepo;
-import com.project.service.userService;
+import com.project.service.UserService;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
@@ -25,7 +25,7 @@ public class UserController {
 	private  userRepo urepo;
 	
 	@Autowired
-	private userService service;
+	private UserService service;
 	
 	@GetMapping("/users")
 	public List<userEntity> getAllUsers() {

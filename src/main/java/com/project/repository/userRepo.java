@@ -1,9 +1,16 @@
 package com.project.repository;
 
-import java.math.BigDecimal;
-import org.springframework.data.jpa.repository.JpaRepository;
+import java.util.List;
+
+import org.springframework.data.repository.CrudRepository;
+
 import com.project.entity.userEntity;
 
-public interface userRepo extends JpaRepository<userEntity, BigDecimal> {
-
+public interface userRepo extends CrudRepository<userEntity, Long> {
+	
+	userEntity findByMemberID(Long memberID);
+	
+	userEntity findByemailId(String emailId);
+	
+	List<userEntity> findAll();
 }
